@@ -1,0 +1,29 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include <unistd.h>
+using namespace std;
+
+int main()
+{
+    cout<<"********Guess The Number Game********"<<endl;
+    usleep(800000);
+    int x,gn,ra,count=0;
+    srand(time(0));
+    cout<<"Enter the range in which you want a random number: ";
+    cin>>ra;
+    x = rand() % ra + 1;
+    do
+    {
+        cout << "Enter a number of your choice: ";
+        cin >> gn;
+        count++;
+        if (gn > x)
+            cout << "Too high!"<<endl;
+        else if (gn < x)
+            cout << "Too low!"<<endl;
+        else
+            cout << "Correct! You got the answer in " << count<< " guesses!"<<endl;
+    } while (gn != x);
+    return 0;
+}
