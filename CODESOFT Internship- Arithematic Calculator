@@ -1,0 +1,52 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    
+    cout<<"************Calculator************"<<endl;
+    int x, y, z;
+    cout<<"1. Addition"<<endl<<"2. Subtraction"<<endl<<"3. Division"<<endl<<"4. Multiplication"<<endl;
+    cout<<"Enter the number to perform the desired operation:";
+    cin>>x;
+        switch(x){
+            case 1:
+                cout<<"Enter first addend: ";
+                cin>>y;
+                cout<<"Enter second addend: ";
+                cin>>z;
+                cout<<"Addition: "<<y+z;
+                break;
+                
+            case 2:
+                cout<<"Enter minuend: ";
+                cin>>y;
+                cout<<"Enter subtrahend: ";
+                cin>>z;
+                cout<<"Subtraction: "<<y-z;
+                break;
+            
+            case 3:
+                cout<<"Enter dividend: ";
+                cin>>y;
+                cout<<"Enter divisor: ";
+                cin>>z;
+                cout<<"Division: "<<y/z;
+                break;
+            
+            case 4:
+                cout<<"Enter multiplicand: ";
+                cin>>y;
+                cout<<"Enter multiplier: ";
+                cin>>z;
+                cout<<"Multiplication: "<<y*z;
+                break;
+                
+            default:
+                cout<<"Invalid option!"<<endl;
+                break;
+        
+        }
+    
+    return 0;
+}
